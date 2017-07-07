@@ -4,7 +4,7 @@ namespace Jadjoubran\LaravelAngular\Provider;
 
 use Illuminate\Contracts\Routing\ResponseFactory;
 
-class ServiceProvider extends ServiceProvider
+class LaravelAngularServiceProvider extends ServiceProvider
 {
     protected function registerResponseMacros()
     {
