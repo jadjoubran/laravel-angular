@@ -2,6 +2,7 @@
 
 namespace Jadjoubran\LaravelAngular\Provider;
 
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Routing\ResponseFactory;
 
 class LaravelAngularServiceProvider extends ServiceProvider
