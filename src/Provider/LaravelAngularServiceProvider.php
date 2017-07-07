@@ -21,7 +21,7 @@ class LaravelAngularServiceProvider extends ServiceProvider
             return $response->json([
             'message' => $status . ' error',
             'errors' => [
-                'message' => [$message],
+                'message' => $message,
                 'info' => $additional_info,
             ],
             'status_code' => $status
