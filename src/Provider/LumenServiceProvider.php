@@ -4,7 +4,7 @@ namespace Jadjoubran\LaravelAngular\Provider;
 
 use Jadjoubran\LaravelAngular\Provider\LaravelAngularServiceProvider;
 
-class LaravelServiceProvider extends LaravelAngularServiceProvider
+class LumenServiceProvider extends LaravelAngularServiceProvider
 {
     public function boot()
     {
