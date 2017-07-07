@@ -1,0 +1,20 @@
+{
+    "name": "jadjoubran/laravel-angular",
+    "description": "Laravel & Angular package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jad Joubran",
+            "email": "joubran.jad@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.1.*"
+    },
+     "autoload": {
+        "psr-4": {
+            "Jadjoubran\\LaravelAngular\\": "src/"
+        }
+    }
+}
