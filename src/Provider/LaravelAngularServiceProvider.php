@@ -4,6 +4,7 @@ namespace Jadjoubran\LaravelAngular\Provider;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use Jadjoubran\LaravelAngular\Command\InstallCommand;
 
 class LaravelAngularServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,7 @@ class LaravelAngularServiceProvider extends ServiceProvider
             ]);
         });
 
-        $response->macro('error', function ($message, $status = 400, $additional_info = []) use ($response){
+        $response->macro('error', function ($message, $status = 400, $additional_info = []) use ($response) {
             return $response->json([
             'message' => $status . ' error',
             'errors' => [
@@ -28,5 +29,16 @@ class LaravelAngularServiceProvider extends ServiceProvider
             'status_code' => $status
             ], $status);
         });
+
+        $this->registerCommands();
+    }
+
+    private function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallCommand::class,
+        ]);
+        }
     }
 }

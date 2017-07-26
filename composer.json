@@ -16,5 +16,8 @@
         "psr-4": {
             "Jadjoubran\\LaravelAngular\\": "src/"
         }
+    },
+    "require-dev": {
+        "illuminate/support": "^5.1"
     }
 }
