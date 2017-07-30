@@ -29,8 +29,6 @@ class LaravelAngularServiceProvider extends ServiceProvider
             'status_code' => $status
             ], $status);
         });
-
-        $this->registerCommands();
     }
 
     private function registerCommands()

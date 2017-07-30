@@ -33,14 +33,25 @@ class InstallCommand extends Command
 
     public function installValidationErrorFormat()
     {
-        $controller = file_get_contents(app_path('/Http/Controllers/Controller.php'));
+        $controllerPath = app_path('/Http/Controllers/Controller.php');
+        $controller = file_get_contents($controllerPath);
 
-        $validationErrorFormat = "protected function formatValidationErrors(Illuminate\Contracts\Validation\Validator $validator)
+        $validationErrorFormat = '
+    protected function formatValidationErrors(\Illuminate\Contracts\Validation\Validator $validator)
     {
-         return $validator->errors()->getMessages();
+        $status = 422;
+        return \Response::json([
+            "message" => $status . " error",
+            "errors" => [
+                "message" => $validator->getMessageBag()->toArray(),
+                "info" => [],
+            ],
+            "status_code" => $status
+        ], $status);
     }
-}";
+}';
 
         $controller = str_replace('}', $validationErrorFormat, $controller);
+        file_put_contents($controllerPath, $controller);
     }
 }

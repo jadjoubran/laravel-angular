@@ -9,5 +9,7 @@ class LaravelServiceProvider extends LaravelAngularServiceProvider
     public function boot()
     {
         $this->registerResponseMacros();
+
+        $this->registerCommands();
     }
 }
