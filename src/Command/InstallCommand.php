@@ -51,7 +51,7 @@ class InstallCommand extends Command
         return [
             "message" => $status . " error",
             "errors" => [
-                "message" => $validator->getMessageBag()->toArray(),
+                "message" => $validator->getMessageBag()->first(),
                 "info" => [],
             ],
             "status_code" => $status
