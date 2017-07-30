@@ -36,6 +36,11 @@ class InstallCommand extends Command
         $controllerPath = app_path('/Http/Controllers/Controller.php');
         $controller = file_get_contents($controllerPath);
 
+        //do not install method more than once
+        if (strpos('formatValidationErrors', $controller)) {
+            return true;
+        }
+
         $validationErrorFormat = '
     protected function formatValidationErrors(\Illuminate\Contracts\Validation\Validator $validator)
     {
