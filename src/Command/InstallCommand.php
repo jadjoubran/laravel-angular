@@ -39,8 +39,8 @@ class InstallCommand extends Command
         $controller = file_get_contents($controllerPath);
 
         //do not install method more than once
-        if (strpos('formatValidationErrors', $controller)) {
-            $this->warning('[Skipped] formatValidationErrors already installed in Controller.');
+        if (strpos($controller, 'formatValidationErrors')) {
+            $this->info('[Skipped] formatValidationErrors already installed in Controller.');
             return true;
         }
 
