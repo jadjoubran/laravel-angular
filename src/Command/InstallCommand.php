@@ -52,7 +52,7 @@ class InstallCommand extends Command
             "message" => $status . " error",
             "errors" => [
                 "message" => $validator->getMessageBag()->first(),
-                "info" => [],
+                "info" => [$validator->getMessageBag()->keys()[0]],
             ],
             "status_code" => $status
         ];
