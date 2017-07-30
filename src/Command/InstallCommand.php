@@ -48,14 +48,14 @@ class InstallCommand extends Command
     protected function formatValidationErrors(\Illuminate\Contracts\Validation\Validator $validator)
     {
         $status = 422;
-        return \Response::json([
+        return [
             "message" => $status . " error",
             "errors" => [
                 "message" => $validator->getMessageBag()->toArray(),
                 "info" => [],
             ],
             "status_code" => $status
-        ], $status);
+        ];
     }
 }';
 
