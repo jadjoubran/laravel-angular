@@ -19,7 +19,7 @@ class LaravelAngularServiceProvider extends ServiceProvider
             ]);
         });
 
-        $response->macro('error', function ($message, $status = 400, $additional_info = []) use ($response) {
+        $response->macro('error', function ($message, $status = 422, $additional_info = []) use ($response) {
             return $response->json([
             'message' => $status . ' error',
             'errors' => [
