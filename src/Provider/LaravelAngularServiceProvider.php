@@ -31,7 +31,7 @@ class LaravelAngularServiceProvider extends ServiceProvider
         });
     }
 
-    private function registerCommands()
+    public function registerCommands()
     {
         if ($this->app->runningInConsole()) {
             $this->commands([

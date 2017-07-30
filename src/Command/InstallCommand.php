@@ -29,6 +29,8 @@ class InstallCommand extends Command
     public function fire()
     {
         $this->installValidationErrorFormat();
+
+        $this->info('Laravel & Angular package installed successfully.');
     }
 
     public function installValidationErrorFormat()
