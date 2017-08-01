@@ -1,3 +1,5 @@
-# Laravel & Angular
+# Laravel & Angular Package
 
-Home of the upcoming Laravel package for working with Angular >= 2
+Documentation: [laravel-angular.io](https://laravel-angular.io)
+
+Legacy [AngularJs](https://laravel-angular.readme.io/docs)
