@@ -17,6 +17,13 @@
             "Jadjoubran\\LaravelAngular\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jadjoubran\\LaravelAngular\\Provider\\LaravelServiceProvider"
+            ]
+        }
+    },
     "require-dev": {
         "illuminate/support": "^5.1"
     }
