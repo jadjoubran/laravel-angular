@@ -21,10 +21,7 @@
         "laravel": {
             "providers": [
                 "Jadjoubran\\LaravelAngular\\Provider\\LaravelServiceProvider"
-            ],
-            "aliases": {
-                "Debugbar": "Barryvdh\\Debugbar\\Facade"
-            }
+            ]
         }
     },
     "require-dev": {
