@@ -33,6 +33,11 @@ class InstallCommand extends Command
         $this->info('Laravel & Angular package installed successfully.');
     }
 
+    public function fire()
+    {
+        return $this->handle();
+    }
+
     public function installValidationErrorFormat()
     {
         $controllerPath = app_path('/Http/Controllers/Controller.php');
