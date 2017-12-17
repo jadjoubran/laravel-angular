@@ -31,6 +31,12 @@ class LaravelAngularServiceProvider extends ServiceProvider
         });
     }
 
+    //Compatibility with Laravel < 5.3
+    public function register()
+    {
+
+    }
+
     public function registerCommands()
     {
         if ($this->app->runningInConsole()) {
