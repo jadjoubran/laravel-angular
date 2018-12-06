@@ -1,4 +1,8 @@
-# Laravel & Angular Package
+# Deprecated
+
+Unfortunately this repository has been deprecated.
+
+### Laravel & Angular Package
 
 Documentation: [laravel-angular.io](https://laravel-angular.io)
 
